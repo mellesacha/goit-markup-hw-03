@@ -16,8 +16,7 @@ body {
 
 .container {
   width: 1158px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
   padding-left: 15px;
   padding-right: 15px;
 }
@@ -50,8 +49,8 @@ img {
   letter-spacing: 0.02em;
   color: var(--dark-bg-a-title);
   text-transform: capitalize;
-  text-align: center; 
-  padding-bottom: 72px; 
+  text-align: center;
+  padding-bottom: 72px;
 }
 
 .section-subtitle {
@@ -67,15 +66,32 @@ img {
   letter-spacing: 0.02em;
 }
 
+/* utility */
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 /* header */
 
-.header-page {
+.header {
+  padding: 24px;
+  border-bottom: 1px solid #e7e9fc;
+}
+
+.header .container {
   display: flex;
-  padding-top: 24px;
-  padding-bottom: 24px;
   text-align: center;
   justify-content: space-between;
-  border-bottom: 1px solid #e7e9fc;
 }
 
 .nav-menu {
@@ -101,6 +117,7 @@ img {
 
 .nav-list {
   display: flex;
+  gap: 40px;
 }
 .nav-link {
   font-weight: 500;
@@ -116,16 +133,9 @@ img {
   color: var(--active-state-elem);
 }
 
-.nav-item:not(:last-child) {
-  margin-right: 40px;
-}
-
 .address-list {
   display: flex;
-}
-
-.address-item:not(:last-child) {
-  margin-right: 40px;
+  gap: 40px;
 }
 
 .address-link {
@@ -150,16 +160,15 @@ img {
   padding-bottom: 188px;
 }
 
-.hero-page{width: 496px;
-margin-left: auto;
-margin-right: auto;}
-
 .hero-title {
   font-size: 56px;
   line-height: 1.07;
   letter-spacing: 0.02em;
   color: var(--main-white-bg);
   text-align: center;
+  width: 496px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .hero .button {
@@ -188,43 +197,49 @@ margin-right: auto;}
 
 /* benefits */
 
-.benefits-list {
-  display: flex;
+.benefits {
   padding-top: 120px;
   padding-bottom: 120px;
+}
+
+.benefits-list {
+  display: flex;
   gap: 24px;
 }
 
 .benefits-item {
-  flex-basis: calc((100%-24 * 3) / 4);
+  flex-basis: calc((100% - 24px * 3) / 4);
+}
+
+.benefits-item .section-subtitle {
+  margin-bottom: 8px;
 }
 
 /* what-are-we-doing */
 
+.work {
+  padding-bottom: 120px;
+}
+
 .work-list {
   display: flex;
-  padding-bottom: 120px;
   gap: 24px;
 }
 
 .work-list-item {
-  flex-basis: calc((100%-24 * 2) / 3);
+  flex-basis: calc((100% - 24px * 2) / 3);
 }
 
 /* our team */
 
 .team {
   background-color: #f4f4fd;
-}
-
-.our-team {
   padding-top: 120px;
-  padding-bottom: 72px;
+  padding-bottom: 120px;
 }
 
 .team-list {
   display: flex;
-  padding-bottom: 120px;
   gap: 24px;
 }
 
@@ -238,6 +253,10 @@ margin-right: auto;}
 .teammate-description {
   padding: 32px 16px;
   text-align: center;
+}
+
+.teammate-description .section-subtitle {
+  margin-bottom: 8px;
 }
 
 /* footer */
@@ -257,7 +276,11 @@ margin-right: auto;}
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #e7e9fc;
-  padding-top: 16px;
+  margin-top: 16px;
+}
+
+.footer-page .logo {
+  margin-right: 0;
 }
 
 .logo-item-footer {
@@ -266,9 +289,13 @@ margin-right: auto;}
 
 /* portfolio */
 
+.portfolio {
+  padding-top: 96px;
+  padding-bottom: 120px;
+}
+
 .filter {
   display: flex;
-  padding-top: 96px;
   justify-content: center;
   gap: 24px;
 }
@@ -278,11 +305,12 @@ margin-right: auto;}
   line-height: 1.5;
   letter-spacing: 0.04em;
   color: #4d5ae5;
-  background: #f4f4fd; */
+  background: #f4f4fd;
   cursor: pointer;
   border: 1px solid #e7e9fc;
   border-radius: 4px;
   padding: 12px 24px;
+  margin-bottom: 72px;
 }
 
 .filter .button:hover,
@@ -293,13 +321,13 @@ margin-right: auto;}
 
 .projects {
   display: flex;
-  padding-top: 72px;
   flex-wrap: wrap;
-  gap: 24px;
-  padding-bottom: 120px;
+  gap: 48px 24px;
 }
 
-.projects-list{flex-basis: calc((100%-24 * 2) / 3);}
+.projects-list {
+  flex-basis: calc((100% - 24px * 2) / 3);
+}
 
 .projects-description {
   border-bottom: 1px solid #e7e9fc;
@@ -309,4 +337,8 @@ margin-right: auto;}
   padding-bottom: 32px;
   text-align: left;
   padding-left: 16px;
+}
+
+.projects-description .section-subtitle {
+  margin-bottom: 8px;
 }
