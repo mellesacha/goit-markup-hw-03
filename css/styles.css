@@ -50,7 +50,7 @@ img {
   color: var(--dark-bg-a-title);
   text-transform: capitalize;
   text-align: center;
-  padding-bottom: 72px;
+  margin-bottom: 72px;
 }
 
 .section-subtitle {
@@ -84,7 +84,7 @@ img {
 /* header */
 
 .header {
-  padding: 24px;
+  padding: 24px 0;
   border-bottom: 1px solid #e7e9fc;
 }
 
@@ -298,6 +298,7 @@ img {
   display: flex;
   justify-content: center;
   gap: 24px;
+  margin-bottom: 72px;
 }
 
 .filter .button {
@@ -310,7 +311,6 @@ img {
   border: 1px solid #e7e9fc;
   border-radius: 4px;
   padding: 12px 24px;
-  margin-bottom: 72px;
 }
 
 .filter .button:hover,
